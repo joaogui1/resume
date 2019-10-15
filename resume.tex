@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.5, 1 December 2018) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Carlito}
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{2E2E2E}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{João Guilherme Madeira Araújo}
+% \tagline{Machine Learning Engineer}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%\photo{3.3cm}{profile.jpg}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{joaogui1@usp.br}
+  \phone{+55 85 99766 4207}
+%  \mailaddress{Address, Street, 00000 County}
+  %\location{Mumbai, India}
+ \homepage{joaogui1.github.io}
+%  \twitter{@marissamayer}
+  \linkedin{linkedin.com/in/joaogui1}
+   \github{github.com/joaogui1} % I'm just making this up though.
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Education}
+
+\cvevent{Bachelor in Computer Science}{University of São Paulo}{Jan 2018 -- Jan 2023}{São Carlos, BR}
+\begin{itemize}
+\item GPA: 9.8/10.0, Ranked 1st out of 118.
+\smallskip
+\item Advanced Coursework: Evolutionary Systems Applied to Robotics, Introduction to Neural Networks, Advanced Topics in AI, Advanced Algorithms 
+\end{itemize}
+
+% \divider
+
+\cvsection{Projects}
+\cvproject{Tensor2Tensor Contributions}{Aug 2019 - Present}{Github}
+\begin{itemize}
+    \item Added commonly used layers initializers to Trax, one of Google Brain's Tensor2Tensor backends
+    \item Added modern activation functions to Trax
+\end{itemize}
+\cvproject{Representation Learning}{Mar 2019 - Present}{University of São Paulo}
+    \begin{itemize}
+        \item Doing Undergraduate Research with funding from FAPESP, one of the most prestigious scholarships in the country
+        \item Generating stochastic images to fool Inception and ResNet
+        \item Studying the latent space of the Imagenet trained Networks
+        \item Applying Neural Networks to feature learning, specifically using ResNet for visual feature extraction and YOLOv2 for semantic feature extraction
+    \end{itemize}
+\smallskip
+\cvproject{Data: Data Science Group}{Mar 2019 - Present}{University of São Paulo}
+    \begin{itemize}
+        \item Attended the first semester's basic Data Science course and was accepted into the Deep Learning Group
+        \item Got first place on the first in-class competition (individual)
+        \item Got third place on the second competition with (three-person group) 
+    \end{itemize}
+\smallskip
+\cvproject{Director of Education at Ganesh}{Aug 2018 - Aug 2019}{University of São Paulo}
+    \begin{itemize}
+        \item A 35 member group focused on studying and spreading knowledge about information security
+        \item Organized weekly classes, workshops and talks, inviting members of the Infosec community to teach new techniques and mindsets to the group
+        \item Created a culture of learning and broke the initial fear in the group members, now they are teaching their own courses and workshops
+    \end{itemize}
+\smallskip
+\cvproject{Deep Learning Course}{Feb 2019 - May 2019}{University of São Paulo}
+    \begin{itemize}
+        \item Taught a 25-hours Deep Learning course using frameworks with different levels of abstraction 
+        \item Used Numpy to give a good low level understanding of Neural Nets and FastAi and Keras for more complex architectures and concepts
+        \item Got students more excited and prepared to learn Deep Learning on their own and now they are being invited to prestigious AI conferences and getting great results in Data science competitions on Kaggle
+    \end{itemize}
+\smallskip
+
+
+% \divider
+%\cvskill{German}{3}
+
+
+\clearpage
+
+% \cvsection[page2sidebar]{Publications}
+
+\nocite{*}
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}}, type=article]
+
+% \divider
+
+% \printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+% %% If the NEXT page doesn't start with a \cvsection but you'd
+% %% still like to add a sidebar, then use this command on THIS
+% %% page to add it. The optional argument lets you pull up the
+% %% sidebar a bit so that it looks aligned with the top of the
+% %% main column.
+% \addnextpagesidebar[-1ex]{page1sidebar}
+
+
+\end{document}
