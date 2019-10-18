@@ -1,11 +1,8 @@
 name: Publish new release of resume
-on:
-  push:
-    tags:
-      - 'v*.*'
+on: push
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout
         uses: actions/checkout@master
